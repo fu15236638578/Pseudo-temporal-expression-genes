@@ -1,0 +1,7 @@
+A=c("GSTP1","MTRNR2L12","TMSB10","MTRNR2L6","MALAT1")
+my_pseudotime_gene <-A
+plot_genes_in_pseudotime(cds[my_pseudotime_gene,])
+gene_expression_data1 <- plot_genes_in_pseudotime(cds[unionGenes,])
+library(writexl)
+library(openxlsx)
+write.xlsx(gene_expression_data1[["data"]], "gene_expression_result1.xlsx",rowNames = FALSE)
